@@ -1,0 +1,483 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* =============================================================================
+	Global Attributes
+========================================================================== */
+
+	html, body{
+		font-family:Arial, Helvetica, sans-serif;
+		background-color:#9EBB8C !important;
+		margin:0px;
+		padding:0px;
+		height:100%;
+	}
+	p{
+		text-align:justify;
+		padding-left:20px;
+		padding-right:20px;
+	}
+	a:hover{
+		text-decoration:none !important;
+	}
+	a, a:hover, a:visited{
+		color:#FFF;
+		text-decoration:none;
+		cursor:pointer;
+	}
+	input[type="file"]{
+		max-width:200px
+	}
+	input[type=radio] { 
+		vertical-align: middle; 
+		margin: 0; 
+		*margin-top: -2px; 
+	}
+	label { 
+		vertical-align: middle;
+		display: inline-block;
+		width: 5em; 
+	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	 input[type=radio] { margin-top: -2px; }
+	}
+	
+	#header img{
+		float:right;
+	}
+	table{
+		margin:auto;
+	}
+	td{
+		padding:5px;
+	}
+	.right{
+		text-align:right;
+	}
+	.left{
+		text-align:left;
+	}
+	.center{
+		text-align:center;
+	}
+	#header{
+		margin:0px;
+		padding:0px;
+		margin-bottom:20px;
+		width:100%;
+		/*position: fixed;
+		top: 0;
+		left: 0;*/
+	}
+	#over_header{
+		width:100%; 
+		margin:0px; 
+		height:50px;
+	}
+	
+	#container{
+		background:#000;
+		width:90%;
+		display: block;
+		margin:auto;
+		min-height:100%;
+		min-width:600px;
+		box-shadow:5px 5px 5px #585858;
+	}
+	
+	#container>#config, #container>#menu, #container>#insert_csv, #container>#insert_sql, #container>#comparar, #container>#show_sql, #container>#export, #container>#ver_tabla, #container>#login{
+		margin:auto;
+		color:#FFF;
+		background:url(../images/Fondo.png) repeat-x;
+		background-size:contain;
+		border:#FFF solid 3px;
+		border-radius:10px 10px 10px 10px;
+		padding:20px;
+		height:auto;
+		box-shadow:5px 5px 5px #009348;
+	}
+	
+	#container>#insert_csv, #container>#insert_sql, #container>#config, #container>#export, #container>#login{
+		width:400px;
+	}
+
+/* =============================================================================
+	main.php
+========================================================================== */
+	
+	#container>#menu{
+		width:400px;
+	}
+	
+	#menu ul{
+		display:table;
+		width:100%;
+	}
+	#menu li{
+		padding-top:20px !important;
+		display:table-cell;
+		vertical-align:middle;
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+	}
+	#menu img:hover{
+		animation:get-bigger 2s infinite;
+	}
+	
+	#menu img[src="images/database_table.png"]{
+		/*animation:get-bigger 2s infinite;*/
+	}
+	
+	@keyframes get-bigger{
+		0% {transform:scale(1.10,1.10);}
+		25% {transform:scale(1,1);}
+		50% {transform:scale(1.10,1.10);}
+		75% {transform:scale(1,1);}
+		100% {transform:scale(1.10,1.10);}
+	}
+	
+	.m_{
+		background:#FFF;
+		text-align:center;
+	}
+	.m_ ul{
+		list-style:none;
+		padding-left:0px;
+		margin-left:0px;
+	}
+	.m_ li{
+		padding:10px;
+		margin:0px;
+	}
+	.m_ ul li a{
+		color:#000;
+	}
+		
+	#m_option{
+		padding-bottom:5px;
+	}
+
+/* =============================================================================
+	documentation
+========================================================================== */
+
+	#documentation, #documentation a{
+		background:#FFF;
+		width:95%;
+		color:#000;
+	}
+	#documentation td{
+		padding:30px;
+	}
+	#documentation h2{
+		color:#03C;
+	}
+	#documentation h3{
+		font-style:italic;
+	}
+	#documentation img{
+		text-align:center;
+		display:block;
+		margin:auto;
+		border:#000 1px solid;
+	}
+	#documentation li{
+		text-align:justify;
+		list-style: lower-alpha;
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	#documentation ol>li{
+		color:#00F;
+		font-weight:bold;
+	}
+	#documentation ol>li>ul{
+		color:#000;
+		font-weight:normal;
+	}
+	
+	#config_query td{
+		padding:10px;
+		border:2px solid #000;
+	}
+	
+	#config_t td{
+		padding-left:15px;
+		padding-right:15px;
+		text-align:right !important;
+	}
+	
+	#formulario_config td{
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	
+	#formulario_config table{
+		border:#000 solid 1px; 
+		border-radius:5px 5px 5px 5px; 
+		width:335px; 
+		background:#FFF; 
+		color:#000;
+		margin-top:10px;
+	}
+	
+	#hidden_buttons{
+		padding:10px;
+	}
+	
+	#ver_tabla{
+		width:auto;
+		max-width:800px;
+	}
+	
+	#comparar{
+		width:500px;
+	}
+	
+	#insert_csv{
+		padding-bottom:40px;
+	}
+	
+	#show_sql{
+		width:600px;
+		text-align:center;
+	}
+	
+	input[name="csv_char"], input[name="separator"]{
+		text-align:center;
+		width:30px; 
+		font-weight:bold;
+		font-size:20px; 
+		font-family:'Arial Black', Gadget, sans-serif;
+	}
+
+/* =============================================================================
+	paginador Attributes
+========================================================================== */
+
+	.pager{
+		padding:10px;
+		margin:0px !important;
+		text-align:right !important;
+	}
+	
+	input[type="button"].pag, input[type="button"].pag:hover{
+		cursor:pointer;
+		border:1px solid #34740e; 
+		 -webkit-border-radius: 3px; 
+		 -moz-border-radius: 3px;
+		 border-radius: 3px;
+		 font-family:arial, helvetica, sans-serif; 
+		 padding: 5px;
+		 text-shadow: -1px -1px 0 rgba(0,0,0,0.3);	
+		 font-weight:bold; 
+		 text-align: center;
+		 color: #FFFFFF;
+		 background-color: #4ba614;
+	}
+	
+	input[type="button"].actual, input[type="button"].actual:hover{
+		 color:#000 !important;
+		 cursor:default;
+		 background-color:#FC0 !important;
+		 padding: 5px;
+		 color:#fff;
+		 border:1px solid #000 !important;
+		 background-image: none !important;
+	}
+
+/* =============================================================================
+	result_table Attributes
+========================================================================== */
+
+	.result_tabla{
+		table-layout:fixed !important;
+		text-align:left;
+		color:#000 !important;
+		border-collapse:collapse !important;
+		border-bottom:1px solid #BBB !important;
+		-moz-box-shadow:    0px 0px 4px 0px #000;
+		-webkit-box-shadow: 0px 0px 4px 0px #000;
+		box-shadow:         0px 0px 4px 0px #000;
+	}
+	
+	.header th{
+		padding:5px;
+		color:#fff;
+		background-color:#000;
+	}
+	
+	.result_tabla td, .result_tabla th{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+	
+	.result_tabla td{
+		border-left:1px solid #BBB;
+		border-right:1px solid #BBB;
+		padding:5px;
+	}
+	
+	.result_tabla tr:nth-child(odd){ background: #fff;}
+	
+	.result_tabla tr:nth-child(even){ background: #ddd;}
+	
+	.result_tabla th{
+		cursor:pointer;
+		padding:5px;
+		border-left:1px solid #BBB;
+		border-right:1px solid #BBB;
+		font-size: 16px;
+		background:#000;
+		font-weight:bold;
+		color: #ffffff;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		background-color: #000;
+	}
+	
+	span[title='edit']:hover, span[title='see']{
+		cursor:pointer;
+	}
+	
+	.control{
+		text-align:center;
+		vertical-align:central;
+		vertical-align:middle;
+		alignment-adjust:central;
+		alignment-baseline:central;
+		width:20px;
+	}
+	
+	.control2{
+		text-align:center;
+		vertical-align:central;
+		vertical-align:middle;
+		alignment-adjust:central;
+		alignment-baseline:central;
+		width:35px;
+		overflow:visible !important;
+	}
+	
+	.row_painted, .result_tabla tr:hover{
+		background:#000 !important;
+		color:#fff;
+	}
+
+/* =============================================================================
+	update_modal Attributes
+========================================================================== */
+
+	#update_modal table{
+		margin:auto;
+		border-collapse:collapse;
+	}
+	
+	#update_modal table td{
+		padding:5px;
+		text-align:justify;
+	}
+	
+	#update_modal table.dt tr{
+		border-bottom:1px solid #000;
+	}
+
+/* =============================================================================
+	Buttons Attributes
+========================================================================== */
+
+	.boton{
+		text-align:left;
+		cursor:pointer;
+		border:1px solid #616261; 
+		font-family:arial, helvetica, sans-serif; 
+		padding: 10px 10px 10px 10px; 
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+		font-weight:bolder; 
+		color: #FFFFFF; 
+		background-color: #7d7e7d;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#7d7e7d), to(#0e0e0e));
+		background-image: -webkit-linear-gradient(top, #7d7e7d, #0e0e0e);
+		background-image: -moz-linear-gradient(top, #7d7e7d, #0e0e0e);
+		background-image: -ms-linear-gradient(top, #7d7e7d, #0e0e0e);
+		background-image: -o-linear-gradient(top, #7d7e7d, #0e0e0e);
+	}
+	.boton:hover{
+		border:1px solid #4a4b4a; 
+		background-color: #646464;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#646464), top(#282828));
+		background-image: -webkit-linear-gradient(top, #646464, #282828);
+		background-image: -moz-linear-gradient(top, #646464, #282828);
+		background-image: -ms-linear-gradient(top, #646464, #282828);
+		background-image: -o-linear-gradient(top, #646464, #282828);
+	}
+	#inst_sql{
+		resize:both; 
+		width:400px; 
+		height:100px;
+	}
+	textarea{
+		height:250px;
+		width:inherit;
+		resize:vertical;
+	}
+	.result{
+		background-color:#0F3;
+		border-radius:5px;
+		text-align:center;
+		padding:10px;
+		color:#000;
+		font-weight:bold;
+	}
+
+/* =============================================================================
+	Other Attributes
+========================================================================== */
+	
+	#ver_tabla *.encabezado{
+		cursor:pointer;
+	}
+	.resultado{
+		color:#000;
+		background:#B8F8E0;
+		padding:10px;
+		text-align:center;
+		overflow:auto;
+	}
+	.loader{
+		width:67px;
+		height:97px;
+		background:url(../images/374.gif) no-repeat;
+		background-size:contain;
+		position:absolute;
+		right:47%;
+		top:50%;
+		z-index:4;
+		border-radius:5px;
+		border:5px solid #FFF;
+	}
+	
+	#tablas{
+		min-height:120px;
+	}
+	
+	.cover {
+		position: absolute;
+		margin:0px;
+		padding-top:30px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display:block;
+		z-index: 3;
+		background-color: #000000;
+		opacity: .9;
+		filter:progid:DXImageTransform.Microsoft.BasicImage(opacity=.7);
+	}
+	
+	#instrucciones{
+		background-color:#FFF;
+		max-height:300px;
+		overflow:scroll;
+		color:#000;
+		text-align:left;
+	}
