@@ -41,5 +41,6 @@ for the folders cruddiy-202312.1 and cruddiy-202312.1_smtp
 
 - HOW TO USE
 1. Design a newsletter in the Newsletters Menu, the visual editor activate on click the name column
+( Save from the editor at least once )
 2. Set a SMTP provider in the SMTP menu, i suggest a gmail account, ask google for the common use of gmail for SMTP
 3. SEND a newsletters in the Mercury Launcher Menu
