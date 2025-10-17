@@ -9,6 +9,7 @@ Mercury Launcher <br>
 - the save and load functions for the GRAPEJS editor
 - A crud for Editor and the SMTP 
 - And a BULK script with PHPMailer
+- Place all in a ADMINLTE Dashboard
 
 <strong> DEV STACK: </strong> 
 
