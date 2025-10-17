@@ -55,7 +55,7 @@ if($consulta->errno) die($consulta->error);
 $fila = $resultado->fetch_assoc();
 //El resultado de la consulta estarán en nombre y apellido, entonces:
 //$body_full = $fila['contenido_grapesjs'];
-$body_full = base64_decode($fila['contenido_html']);
+$body_full = base64_decode($fila['content_html']);
 
 //MJML
 /* $apiId = 'c889a7b3-2a9e-4eb6-ad08-6f4b74c1ef73';
@@ -138,7 +138,7 @@ if (!$mail->send()) {
 }
 //PHPMAILER
 		
-		echo "<font color='green'><br> $cont .<strong>Campaña enviada a: </strong>".$fila['email']."</font></br>";
+		echo "<font color='green'><br> $cont .<strong>Campaign sent to: </strong>".$fila['email']."</font></br>";
         $mail->ClearAllRecipients();
 		$cont = $cont + 1;
     }
