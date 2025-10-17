@@ -5,7 +5,10 @@ EMAIL BULK SOFTWARE
 ![alt text](https://i.postimg.cc/wBz5d60N/Screenshot-2025-10-12-224531.png)
 ![alt text](https://i.postimg.cc/y6GF8hLB/Screenshot-2025-10-12-224558.png)
 
-Basically i dev the save and load functions for the GRAPEJS editor and a crud for the SMTP and a BULK script with PHPMailer
+Basically i dev 
+- the save and load functions for the GRAPEJS editor
+- A crud for Editor and the SMTP 
+- And a BULK script with PHPMailer
 
 - DEV STACK: 
 
