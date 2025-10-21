@@ -114,8 +114,11 @@ desired effect
 <h1>INDIVIDUAL</h1>
 <form action="core_austral/mercury_austral_uno.php" method="POST" target="_blank">      
      <input type="text" id="subject" name="subject" style='width: 300px;' placeholder="Email subject">
-     <select id='SearchAdvertising' name='SearchAdvertising' style='width: 300px;' lang="es">
+     <select id='SearchAdvertising' name='SearchAdvertising' style='width: 250px;' lang="es">
         <option value='0'>- Search for advertising -</option>
+     </select>
+     <select id='SearchSMTP' name='SearchSMTP' style='width: 200px;' lang="es">
+        <option value='0'>- Search for SMTP -</option>
      </select>
      <input type="email" id="email" name="email" style='width: 300px;' placeholder="Email">
      <button type="submit" class="btn btn-success">LAUNCH</button>
@@ -124,10 +127,12 @@ desired effect
 <h1>BULK</h1>
 <form action="core_austral/mercury_austral.php" method="POST" target="_blank">   
     <input type="text" id="subject" name="subject" style='width: 300px;' placeholder="Email subject">   
-    <select id='SearchAdvertising2' name='SearchAdvertising2' style='width: 300px;' lang="es">
+    <select id='SearchAdvertising2' name='SearchAdvertising2' style='width: 250px;' lang="es">
         <option value='0'>- Search for advertising -</option>
      </select>
-
+     <select id='SearchSMTP2' name='SearchSMTP2' style='width: 200px;' lang="es">
+        <option value='0'>- Search for SMTP -</option>
+     </select>
      <select id='SearchRecipients' name='SearchRecipients' style='width: 300px;' lang="es">
         <option value='0'>- Search Recipients -</option>
      </select>
@@ -197,7 +202,46 @@ $(document).ready(function(){
         cache: true
       }
    });
+   
+    $("#SearchSMTP").select2({
+      ajax: {
+        url: "extract_smtp_list.php",
+        type: "post",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+           return {
+              searchTerm: params.term // search term
+           };
+        },
+        processResults: function (response) {
+           return {
+              results: response
+           };
+        },
+        cache: true
+      }
+   });
 
+    $("#SearchSMTP2").select2({
+      ajax: {
+        url: "extract_smtp_list.php",
+        type: "post",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+           return {
+              searchTerm: params.term // search term
+           };
+        },
+        processResults: function (response) {
+           return {
+              results: response
+           };
+        },
+        cache: true
+      }
+   });
 
 });
 </script>

@@ -109,6 +109,7 @@ INSERT INTO `cloud` (`id`, `name`, `url`) VALUES
 
 CREATE TABLE `smtp` (
   `id` tinyint(4) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `hostname` varchar(500) NOT NULL,
   `username` varchar(500) NOT NULL,
   `password` varchar(500) NOT NULL,

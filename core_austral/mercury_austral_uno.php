@@ -9,6 +9,7 @@ include('../mysqli.inc.php');
 $asunto  = $_POST["subject"];
 $email   = $_POST["email"];
 $body    = $_POST["SearchAdvertising"];
+$smtp = $_POST["SearchSMTP"];
 
 //PHP Mailer
 
@@ -32,7 +33,7 @@ require 'PHPMailer-6.2.0/src/SMTP.php';
 date_default_timezone_set('America/Bogota');
 
 //OBTENER DATOS DEL SMTP DESDE LA BD
-$consulta = "SELECT * FROM smtp ORDER BY id LIMIT 1";
+$consulta = "SELECT * FROM smtp WHERE id='$smtp' ORDER BY id LIMIT 1";
 $resultado = $conexion->query($consulta);
 if($consulta->errno) die($consulta->error);
 //Guardamos el registro en la variable $fila
