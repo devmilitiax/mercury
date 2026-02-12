@@ -3,7 +3,7 @@ Mercury Launcher <br>
 <strong> EMAIL BULK SOFTWARE </strong> 
 
 ![alt text](https://i.postimg.cc/wBz5d60N/Screenshot-2025-10-12-224531.png)
-![alt text](https://i.postimg.cc/y6GF8hLB/Screenshot-2025-10-12-224558.png)
+![alt text](https://i.postimg.cc/wjPqjvX4/Screenshot-2026-02-12-015840.png)
 
 UPDATE 21 OCTOBER 2025
 ![alt text](https://i.postimg.cc/y8ZXH8yQ/Screenshot-2025-10-21-140944.png)
