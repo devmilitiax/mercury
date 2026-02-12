@@ -39,15 +39,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$filter = $_POST["filter"] == "" ? null : trim($_POST["filter"]);
 		$flag = $_POST["flag"] == "" ? null : trim($_POST["flag"]);
 		$email = $_POST["email"] == "" ? null : trim($_POST["email"]);
-		$subject = $_POST["subject"] == "" ? null : trim($_POST["subject"]);
-		$createdate = trim($_POST["createdate"]);
-		
+		$subject = $_POST["subject"] == "" ? null : trim($_POST["subject"]);	
 
 
-        $stmt = $link->prepare("INSERT INTO `newsletters` (`id_grapesjs`, `name`, `content_grapesjs`, `content_html`, `filter`, `flag`, `email`, `subject`, `createdate`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $link->prepare("INSERT INTO `newsletters` (`id_grapesjs`, `name`, `content_grapesjs`, `content_html`, `filter`, `flag`, `email`, `subject`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
         try {
-            $stmt->execute([ $id_grapesjs, $name, $content_grapesjs, $content_html, $filter, $flag, $email, $subject, $createdate ]);
+            $stmt->execute([ $id_grapesjs, $name, $content_grapesjs, $content_html, $filter, $flag, $email, $subject ]);
         } catch (Exception $e) {
             error_log($e->getMessage());
             $error = $e->getMessage();
@@ -249,10 +247,6 @@ $template = base64_encode('<mjml>
 						<div class="form-group">
                                             <label for="subject">subject</label>
                                             <input type="text" name="subject" id="subject" maxlength="200" class="form-control" value="<?php echo @$subject; ?>">
-                                        </div>
-						<div class="form-group">
-                                            <label for="createdate">createdate*</label>
-                                            <input type="text" name="createdate" id="createdate" class="form-control" value="<?php echo @$createdate; ?>">
                                         </div>
 
                         <input type="submit" class="btn btn-primary" value="<?php translate('Create') ?>">

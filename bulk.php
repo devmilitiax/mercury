@@ -245,6 +245,10 @@ $(document).ready(function(){
 
 });
 </script>
+<br><br><br>
+<strong>Legal Notice / Disclaimer:</strong> Cold emailing has legal implications depending on the region (GDPR, CAN-SPAM, etc.). It is the user's responsibility to verify the legality of their campaigns and ensure the inclusion of an opt-out link in each message. Avoiding penalties is the best investment for your strategy.
+<br><br>
+<strong>Nota Legal / Disclaimer:</strong> El envío de correos en frío tiene implicaciones legales según la región (GDPR, CAN-SPAM, etc.). Es responsabilidad del usuario verificar la legalidad de sus campañas y asegurar la inclusión de un enlace de Opt-out en cada mensaje. Evitar una sanción es la mejor inversión de tu estrategia.
 
     </section>
     <!-- /.content -->

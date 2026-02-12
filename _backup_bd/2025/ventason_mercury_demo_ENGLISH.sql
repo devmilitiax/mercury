@@ -36,6 +36,9 @@ CREATE TABLE `administrator` (
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+INSERT INTO administrator (id, username, pass, ip, role) 
+VALUES (1, 'admin', MD5('admin'), '127.0.0.1', '1');
+
 -- --------------------------------------------------------
 
 --
